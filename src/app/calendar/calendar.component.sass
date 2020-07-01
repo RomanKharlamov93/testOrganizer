@@ -1,0 +1,43 @@
+.calendar
+  margin-bottom: 1rem
+  &__header
+    border: 1px solid #000
+  &__month-list
+    display: flex
+    width: 100%
+    justify-content: space-between
+
+  &__month-list-item
+    text-align: center
+    transition: all .2s
+    padding: 1rem
+    font-weight: 600
+    width: 100%
+  &__day-list
+    display: flex
+    width: 100%
+    justify-content: space-between
+
+  &__day-list-item
+    text-align: center
+    transition: all .2s
+    padding: 1rem
+    width: 100%
+    border: 1px solid silver
+    margin: 1px
+    box-sizing: border-box
+    border-spacing: 10px 10px
+
+    &.disabled
+      opacity: .5
+    &:hover:not(:disabled)
+      background: #eee
+      cursor: pointer
+
+    .active
+      color: var(--primary-color)
+      font-weight: bold
+    .selected
+      color: blue
+    .holyday
+      background: red

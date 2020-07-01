@@ -1,0 +1,7 @@
+<p>
+  <em class="material-icons" (click)="go(-1)"><</em>
+  <span>
+    {{dateService.date |async | moment}}
+  </span>
+  <em class="material-icons" (click)="go(1)">></em>
+</p>

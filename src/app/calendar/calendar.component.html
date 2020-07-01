@@ -1,0 +1,26 @@
+<div class="calendar">
+  <div class="calendar__header">
+    <ul class="calendar__month-list">
+      <li class="calendar__month-list-item">Пн</li>
+      <li class="calendar__month-list-item">Вт</li>
+      <li class="calendar__month-list-item">Ср</li>
+      <li class="calendar__month-list-item">Чт</li>
+      <li class="calendar__month-list-item">Пт</li>
+      <li class="calendar__month-list-item">Сб</li>
+      <li class="calendar__month-list-item">Вс</li>
+    </ul>
+  </div>
+  <div class="calendar__body">
+    <ul class="calendar__day-list" *ngFor="let week of calendar">
+      <li class="calendar__day-list-item" *ngFor="let day of week.days" [class.disabled]="day.disabled"
+          (click)="select(day.value)">
+        <span
+          [class.selected]="day.selected"
+          [class.active]="day.active">
+          {{day.value | moment: 'D'}}
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+
